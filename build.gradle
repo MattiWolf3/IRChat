@@ -1,0 +1,30 @@
+plugins {
+    id 'scala'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+}
+
+group 'com.volkova'
+version '1.0-SNAPSHOT'
+
+javafx {
+    version = "22"
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.scala-lang:scala-library:2.13.14'
+    implementation 'org.scala-lang.modules:scala-java8-compat_2.13:1.0.2'
+    implementation 'com.typesafe.akka:akka-slf4j_2.13:2.6.20'
+    implementation 'com.typesafe.akka:akka-actor-typed_2.13:2.6.20'
+    implementation 'com.typesafe.akka:akka-cluster-typed_2.13:2.6.20'
+    implementation 'com.typesafe.akka:akka-cluster-tools_2.13:2.6.20'
+    implementation 'com.typesafe.akka:akka-serialization-jackson_2.13:2.6.20'
+    implementation 'ch.qos.logback:logback-classic:1.4.12'
+}
+
+mainClassName = "com.volkova.Launcher"

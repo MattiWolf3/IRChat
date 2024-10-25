@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            fx:controller="com.volkova.controllers.PrivateChatController">
+    <center>
+        <VBox>
+            <ScrollPane VBox.vgrow="ALWAYS" fitToHeight="true" fitToWidth="true" maxHeight="5000.0" maxWidth="5000.0"
+                        prefHeight="400.0" prefWidth="500.0">
+                <TextArea fx:id="txtAreaDisplay" editable="false"/>
+            </ScrollPane>
+        </VBox>
+    </center>
+    <bottom>
+        <HBox spacing="10" BorderPane.alignment="CENTER">
+            <TextField fx:id="txtInput" promptText="New message" HBox.hgrow="ALWAYS"/>
+            <Button onAction="#handleSend" text="Send"/>
+        </HBox>
+    </bottom>
+</BorderPane>
